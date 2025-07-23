@@ -4,7 +4,7 @@ import { createIssue } from "../Api/issueService";
 
 import styled from "styled-components";
 
-import { useNavigate } from "react-router-dom"; 
+import { data, useNavigate } from "react-router-dom"; 
 
 import { motion } from "framer-motion";
 
@@ -35,6 +35,8 @@ const Report = () => {
       image: base64Image || null,
       geo: geoLocation || null,
     };
+    console.log("submitting issue:", data);
+    
 
     try {
       const res = await createIssue(newIssue);
