@@ -4,7 +4,7 @@ import { createIssue } from "../Api/issueService";
 
 import styled from "styled-components";
 
-import { data, useNavigate } from "react-router-dom"; 
+import { navigate, useNavigate } from "react-router-dom"; 
 
 import { motion } from "framer-motion";
 
@@ -35,7 +35,7 @@ const Report = () => {
       image: base64Image || null,
       geo: geoLocation || null,
     };
-    console.log("submitting issue:", data);
+    console.log("submitting issue:", newIssue);
     
 
     try {
